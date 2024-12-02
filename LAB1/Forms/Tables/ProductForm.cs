@@ -29,10 +29,11 @@ namespace LAB1.Forms.Tables
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "lAB01DataSet1.Catalogs". При необходимости она может быть перемещена или удалена.
             this.catalogsTableAdapter.Fill(this.lAB01DataSet1.Catalogs);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "lAB01DataSet1.Orders". При необходимости она может быть перемещена или удалена.
-            this.ordersTableAdapter.Fill(this.lAB01DataSet1.Orders);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "lAB01DataSet1.Products". При необходимости она может быть перемещена или удалена.
             this.productsTableAdapter.Fill(this.lAB01DataSet1.Products);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "lAB01DataSet1.Catalogs". При необходимости она может быть перемещена или удалена.
+            this.catalogsTableAdapter.Fill(this.lAB01DataSet1.Catalogs);
+
 
         }
 
@@ -79,6 +80,14 @@ namespace LAB1.Forms.Tables
         {
             GridTables.ProductForm view = new GridTables.ProductForm();
             view.ShowDialog();
+        }
+
+        private void productsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.lAB01DataSet1);
+
         }
     }
 }

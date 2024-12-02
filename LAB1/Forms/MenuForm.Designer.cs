@@ -97,7 +97,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "Меню";
             this.ResumeLayout(false);
             this.PerformLayout();
 
